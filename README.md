@@ -1,4 +1,4 @@
-# CNKS - 中国知网搜索aka.CNKI Search
+# CNKS - 中国知网搜索 aka. CNKI Search
 
 ## 简介
 
