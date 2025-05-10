@@ -31,37 +31,55 @@ CNKS采用服务器-客户端架构，包含以下主要组件：
 
 ### 要求
 
-- Python 3.12 或更高版本
-- Playwright
-- MCP
+- uv / uvx
 
-### 安装步骤
+### 安装步骤 (可选)
 
-1. 克隆仓库：
+1. 克隆仓库到本地：
    ```
-   git clone https://github.com/your-username/cnks.git
+   git clone https://github.com/bai-z-l/cnks.git
    cd cnks
    ```
 
 2. 安装依赖：
    ```
    pip install -e .
-   playwright install
    ```
 
 ## 使用方法
 
-### 启动服务器
-
+### MCP客户端配置 (仅通过了Cursor验证)
 ```
-cnks
+{
+  "mcpServers": {
+    "cnks": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\Users\\ptelegion\\1st_cursor_proj\\cnks",
+        "run",
+        "cnks"
+      ]
+   }
+  }
+} 
 ```
 或
 ```
-cnks-server
+{
+  "mcpServers": {
+    "cnks": {
+      "command": "uvx",
+      "args": [
+        "run",
+        "cnks"
+      ]
+   }
+  }
+} 
 ```
 
-### 使用客户端发送请求
+### 使用客户端发送请求 (仅用于调试)
 
 ```
 cnks-client "搜索关键词"
@@ -78,13 +96,12 @@ cnks-worker-test "搜索关键词"
 
 ## 配置
 
-系统可通过以下环境变量进行配置：
+可通过以下环境变量进行配置：
 
 - `CACHE_FILE`: 缓存文件路径，默认为 "cache.json"
 - `SEARCH_URL`: 搜索URL，默认为中国知网搜索页面
 
 可以创建`.env`文件设置这些环境变量。
-
 
 # NOTE
 
