@@ -1,4 +1,4 @@
-# CNKS - 中国知网搜索与引文处理系统
+# CNKS - 中国知网搜索aka.CNKI Search
 
 ## 简介
 
@@ -85,6 +85,10 @@ cnks-worker-test "搜索关键词"
 
 可以创建`.env`文件设置这些环境变量。
 
+
+# NOTE
+
+The author is one of my friends whose github account "bai-z-l" is in Spammy.
 ## 许可证
 
 [项目许可证信息]
